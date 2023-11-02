@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elenco ristoranti</title>
+    <script type="text/javascript" src="../JavaScript/validate.js"></script>
+</head>
+<body>
+    <table border="1" id="tab">
+        <tr>
+            <th> Nome</th>
+            <th>Descrizione</th>
+            <th>Ubicazione</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Grande Biramide D'egito</td>
+            <td>bizza bollo , bizza salame, bizza tuto,fetenderi</td>
+            <td>Egito</td>
+            <td><input type="checkbox" class="ristoranteSel" value="1"/></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>pizzeria da walter</td>
+            <td>pizza schimico, patatine soffritte, polpette di cane</td>
+            <td>cosenza</td>
+            <td><input type="checkbox" class="ristoranteSel" value="2"/></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>biramidi 2.0</td>
+            <td>fetenonenderi,borco la madonno</td>
+            <td>egito nord</td>
+            <td><input type="checkbox" class="ristoranteSel" value="3"/></td>
+        </tr>
+    </table>
+    <input type="button" value="elimina record"/>
+
+    <div>
+        <h3>Aggiungi un nuovo ristorante </h3>
+        <form method="post" action="../addRistorante">
+            <label for="nome_rist">Nome Ristorante:</label>
+            <input id="nome_rist" type="text" name="nome_ristorante" />
+            <br>
+            <label for="desc_rist">Descrizione Ristorante:</label>
+            <textarea id="desc_rist" placeholder="Inserisci la descrizione" name="Descrizione">
+
+            </textarea>
+            <br>
+            <label for="Ub_ristorante">Ubicazione ristorante:</label>
+            <select id="Ub_ristorante" name="Ubicazione_ristorante">
+                <option value="Rende">Rende</option>
+                <option value="Cosenza">Cosenza</option>
+                <option value="Castrolibero">Castrolibero</option>
+            </select>
+            <br>
+            <input type="button" value="verifica dati e aggiungi" onclick="verificaRistorante()" />
+            <input type="submit" />
+            <input type="reset"  />
+
+        </form>
+    </div>
+    <p> <a href="/"><< torna alla home </a> </p>
+</body>
+</html>
