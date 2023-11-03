@@ -5,9 +5,9 @@ function verificaRistorante()
    var Descr_RistTxt = document.getElementById("desc_rist");
    var ub_Rist = document.getElementById("Ub_ristorante");
 
-   var nomeRist = nomeRistTxt.value;
-   var descRist = Descr_RistTxt.value;
-   var ubRist = ub_Rist.value;
+   var nomeRist = nomeRistTxt.value.trim();
+   var descRist = Descr_RistTxt.value.trim();
+   var ubRist = ub_Rist.value.trim();
 
    var ok = validateRistorante(nomeRist,descRist,ubRist);
 
@@ -61,8 +61,21 @@ function validateRistorante(nome, descr, ub)
 
 function  rimuoviRist()
 {
-    var ristSel = document.querySelectorAll(".ristoranteSel:checked")
-    ristSel.forEach(function (elementSelected){
-        elementSelected
+    var ristorantiSelezionati = document.querySelectorAll(".ristoranteSelezionato:checked");
+    ristorantiSelezionati.forEach(function (elementSelected){
+        // for each elementSelected in ristorantiSelezionati:
+        var valueSel = elementSelected.getAttribute("value");
+
+        var riga = document.querySelector("tr#r" + valueSel);
+        riga.style = "text-decoration: line-through";
     });
+}
+
+
+class Ristorante{
+    constructor(nome, descrizione, ubicazione) {
+        this.nome = nome;
+        this.descrizione = descrizione;
+        this.ubicazione=ubicazione;
+    }
 }
