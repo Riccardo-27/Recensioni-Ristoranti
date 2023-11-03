@@ -13,6 +13,4 @@ public class ServiziRest {
     {
         return "ok";
     }
-
-    public String hello()
 }
