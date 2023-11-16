@@ -1,4 +1,4 @@
-package it.unical.informatica.webapp24.recensioneristorante;
+package it.unical.informatica.webapp24.recensioniristoranti;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

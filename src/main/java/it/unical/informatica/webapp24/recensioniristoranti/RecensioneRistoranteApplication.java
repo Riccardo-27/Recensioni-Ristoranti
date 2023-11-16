@@ -1,4 +1,4 @@
-package it.unical.informatica.webapp24.recensioneristorante;
+package it.unical.informatica.webapp24.recensioniristoranti;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
